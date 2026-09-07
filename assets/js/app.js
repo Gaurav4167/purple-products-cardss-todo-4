@@ -35,7 +35,7 @@ let products = JSON.parse(sessionStorage.getItem("products"))
 function templatingData(productsArr){
     let result = "";
     productsArr.forEach((ele) => {
-        result += ` <div class="col-3 select" id=${ele.id}>
+        result += ` <div class="col-3 mt-4 select" id=${ele.id}>
                                 <div class="card result-card fixed-height">
                                       <div class="result-heading"> <h4> ${ele.pName} </h4></div>
                                        <div class="result-description">
@@ -66,7 +66,7 @@ function addNewProdct(ele){
     products.push(newProductObj)
     sessionStorage.setItem("products",JSON.stringify(products))
 
-    productCard.innerHTML += ` <div class="col-3 select" id=${newProductObj.id}>
+    productCard.innerHTML += ` <div class="col-3 mt-4 select" id=${newProductObj.id}>
                                 <div class="card result-card fixed-height">
                                       <div class="result-heading"> <h4> ${newProductObj.pName} </h4></div>
                                        <div class="result-description">
