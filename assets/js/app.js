@@ -80,6 +80,12 @@ function addNewProdct(ele){
                                        </div>
                                   </div>
                                 </div>`
+
+                                Swal.fire({
+                                        title: "Added!",
+                                        text: "Product Added Successfully",
+                                        icon: "success" 
+                                         });
     form.reset()
 }
 //========================== 3. Editing ==================================
@@ -129,17 +135,46 @@ function updateProduct(ele){
                                   addBtn.classList.remove("d-none")
                                   updateBtn.classList.add("d-none")
 
+                                  Swal.fire({
+                                        title: "Updated!",
+                                        text: "Product Updated Successfully",
+                                        icon: "success" 
+                                         });
+
+                                         form.reset()
+
+
 }
 //========================== 5. Deleting ==================================
 function deleteCard(ele){
     let DELETE_ID = ele.closest(".select").id;
 
-    let deltedProductIndex = products.findIndex(ele => ele.id === DELETE_ID)
+    Swal.fire({
+     title: "Are you sure?",
+     text: "You cant get this product back",
+     icon: "warning",
+     showCancelButton: true,
+     confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+        if (result.isConfirmed){
+            let deltedProductIndex = products.findIndex(ele => ele.id === DELETE_ID)
     products.splice(deltedProductIndex, 1);
 
     sessionStorage.setItem("products", JSON.stringify(products))
 
     ele.closest(".select").remove()
+
+    Swal.fire({
+         title: "Deleted!",
+         text: "Product has been deleted.",
+         icon: "success"
+    });
+        } 
+    });
+
+    
 }
 
 form.addEventListener("submit", addNewProdct)
