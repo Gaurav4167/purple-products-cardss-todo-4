@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.css" integrity="sha512-GmZYQ9SKTnOea030Tbiat0Y+jhnYLIpsGAe6QTnToi8hI2nNbVMETHeK4wm4MuYMQdrc38x+sX77+kVD01eNsQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Todo Subject Card2 - purple</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-6 offset-3">
+                <div class="card bg-violet text-white">
+                    <div class="card-body">
+
+                       <div class="row border-bottom">
+                        <div class="col-10 offset-2"> <h4 class=""><b>Enter Your Fevourite Product</b></h4>
+                        <form id="form" action=""></div>
+                       </div>
+
+                            <label class="mt-4 cursor-p" for="pName"><b>Name:</b></label>
+                            <input class="form-control" type="text" placeholder="Product Name" id="pName">
+
+                            <label class="mt-4 cursor-p" for="description"><b>Description</b></label>
+                            <textarea  class="form-control"  name="" id="description">
+
+                            </textarea>
+
+                            <button id="addBtn" class="btn shadow border text-white mt-4"> Add </button>
+                            
+                            <button type="button" id="updateBtn" class="btn shadow border text-white mt-4 d-none"> Update </button>
+
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div>
+                        <h4 class="between-heading shadow"><b>Products Card Data</b></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2" id="product-card">
+                            <!-- <div class="col-3">
+                                <div class="card result-card ">
+                                      <div class="result-heading"> <h4>Laptop</h4></div>
+                                       <div class="result-description">
+                                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus corrupti, sapiente nemo in illo iure molestiae temporibus quisquam. Odit vero illum cum consequatur dolore nihil explicabo repudiandae labore accusamus aspernatur.</p>
+                                       </div>
+                                       <div class="result-footer">
+                                        <div class="d-flex justify-content-between">
+                                             <button id="editBtn" class="btn btn-warning text-white shadow"><b>Edit</b></button>
+                                            <button id="deleteBtn" class="btn btn-danger"><b>Delete</b></button>
+
+                                        </div>
+                                       </div>
+                                  </div>
+                                </div> -->
+                            </div>
+                        </div>
+        </div>
+    </div>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
